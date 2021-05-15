@@ -1,0 +1,13 @@
+ORDER_NO,ORDER_DATE,PURCHASE_AMOUNT,Customer Name,GRADE,Salesman,COMMISSION
+70002,05-OCT-12,65.26,Nick Rimando,100,James Hong,15
+70008,15-AUG-12,5760,Nick Rimando,100,James Hong,15
+70013,25-APR-12,3045.6,Nick Rimando,100,James Hong,15
+70005,27-JUL-12,2400.6,Brad Davis,200,James Hong,15
+70001,05-OCT-12,150.5,Graham Zusi,200,Nail Knite,13
+70007,10-SEP-12,948.5,Graham Zusi,200,Nail Knite,13
+70012,27-JUN-12,250.45,Julian Green,300,Nail Knite,13
+70010,10-OCT-12,1983.43,Fabian Johnson,300,Pierre,14
+70004,17-AUG-12,110.5,Geoff Cameron,100,Lauson Hen,12
+70003,10-OCT-12,2480.4,Geoff Cameron,100,Lauson Hen,12
+70011,17-AUG-12,75.29,Jozy Altidor,200,Paul Adam,13
+70009,10-SEP-12,270.65,Brad Guzan,300,Pit Alex,11

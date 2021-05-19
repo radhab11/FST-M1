@@ -2,14 +2,11 @@ package project;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -22,27 +19,17 @@ public class Activity_4 {
 	@BeforeTest
 	public void setUp() throws MalformedURLException {
 		DesiredCapabilities caps = new DesiredCapabilities();
-
 		caps.setCapability("deviceName", "Pixel4");
-
 		caps.setCapability("platformName", "android");
-
 		caps.setCapability("automationName", "UiAutomator2");
-
 		caps.setCapability("appPackage", "com.android.chrome");
-
 		caps.setCapability("appActivity", "com.google.android.apps.chrome.Main");
 		caps.setCapability("noReset", true);
-
-
 		URL appServer = new URL("http://0.0.0.0:4723/wd/hub");
-
 		driver = new AndroidDriver<MobileElement>(appServer, caps);
-
 	}
 
 	@Test
-
 	public void todoList() throws InterruptedException {
 		driver.get("https://www.training-support.net/selenium");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -71,7 +58,6 @@ public class Activity_4 {
 			driver.findElementByXPath("//android.widget.EditText[@resource-id='taskInput']").sendKeys(addTasks);
 			driver.findElementByXPath("//android.widget.Button[@text='Add Task']").click();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
 		}
 
 		driver.findElementByXPath("//android.view.View[@text='Add Task 1']").click();
@@ -80,7 +66,6 @@ public class Activity_4 {
 
 		MobileElement clearListBtn = driver.findElementByXPath("//android.view.View[3][@class='android.view.View']");
 		clearListBtn.click();
-
 	}
 	@AfterTest 
 	public void closeDriver() {

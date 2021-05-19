@@ -18,24 +18,15 @@ AppiumDriver<MobileElement> driver = null;
 	
 	@BeforeTest
 	public void setUp() throws MalformedURLException {
-		DesiredCapabilities caps = new DesiredCapabilities();
-		
+	      DesiredCapabilities caps = new DesiredCapabilities();
 	      caps.setCapability("deviceName", "Pixel4");
-		
 	      caps.setCapability("platformName", "android");
-	      
 	      caps.setCapability("automationName", "UiAutomator2");
-		
 	      caps.setCapability("appPackage", "com.android.calculator2");
-
-		  caps.setCapability("appActivity", "com.android.calculator2.Calculator");
+	      caps.setCapability("appActivity", "com.android.calculator2.Calculator");
 	      caps.setCapability("noReset", true);
-		
-		
 	      URL appServer = new URL("http://0.0.0.0:4723/wd/hub");
-		
-	      driver = new AndroidDriver<MobileElement>(appServer, caps);
-		
+	      driver = new AndroidDriver<MobileElement>(appServer, caps);	
 	}
 	
 	@Test
@@ -94,7 +85,6 @@ AppiumDriver<MobileElement> driver = null;
 		Assert.assertEquals("25", result);
 		
 	}
-	
 	
 	@AfterTest 
 	public void closeDriver() {
